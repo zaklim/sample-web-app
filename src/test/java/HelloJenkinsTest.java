@@ -8,11 +8,11 @@ import static org.mockito.ArgumentMatchers.anyString;
 @RunWith(MockitoJUnitRunner.class)
 public class HelloJenkinsTest{
 	@Spy
-	private MavenJenkins mj;
+	private HelloJenkins hj;
 
 	@Test
         public void should_call_display(){
-		mj.display("Maven-Jenkins");
-		verify(mj).display(anyString());
+		hj.display("Hello Jenkins");
+		verify(hj).display(anyString());
 	}
 }
