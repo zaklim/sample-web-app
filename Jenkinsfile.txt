@@ -1,0 +1,25 @@
+pipeline {
+	agent any
+	stages {
+		stage("Compile") {
+			steps {
+				bat "mvn compiler:compile"
+			}
+		}
+		stage("Test") {
+			steps {
+				bat "mvn surefire:test"
+			}
+		}
+		stage("Package") {
+			steps {
+				bat "mvn jar:jar"
+			}
+		}
+		stage("TomcatDeploy") {
+			steps {
+			
+			}
+		}
+	}
+}
